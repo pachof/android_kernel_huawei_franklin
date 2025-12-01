@@ -17,4 +17,6 @@ jobs:
           arch: arm64
           other-gcc64-url: https://github.com/KudProject/aarch64-linux-android-4.9
           other-gcc64-branch: master
+          other-gcc32-url: https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9
+          other-gcc32-branch: lineage-17.1
           android-version: 10

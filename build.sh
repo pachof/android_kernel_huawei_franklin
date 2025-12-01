@@ -54,7 +54,7 @@ exit 1
 fi
 fi
 
-sudo apt-get -y install bc clang llvm lld gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi lld
+sudo apt-get -y install bc clang llvm lld gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi lld device-tree-compiler
 
 if [[ $1 = "-r" || $1 = "--regen" ]]; then
 make O=out ARCH=arm64 $DEFCONFIG savedefconfig
@@ -93,6 +93,5 @@ echo -e "\nCompleted in $((SECONDS / 60)) minute(s) and $((SECONDS % 60)) second
 echo "Zip: $ZIPNAME"
 else
 echo -e "\nCompilation failed!"
-make clean
 exit 1
 fi

@@ -60,7 +60,8 @@ $(DRVGEN_FILE_LIST): $(DRVGEN_TOOL) $(DRVGEN_FIG) $(PROJ_DTS_FILES)
 endif
 	for i in $(PROJ_DTS_FILES); do \
 		base_prj=`grep -m 1 '#include [<\"].*\/cust\.dtsi[>\"]' $$i | sed 's/#include [<"]//g'\
-	       	| sed 's/\/cust\.dtsi[>"]//g' | sed 's/\/\*//g' | sed 's/\*\///g' | sed 's///g'`\
+	       	| sed 's/\/cust\.dtsi[>"]//g' | sed 's/\/\*//g' | sed 's/\*\///g' | sed 's/
+//g'`\
 		prj_path=$(DRVGEN_OUT)/$$base_prj ;\
 		dws_path=$(srctree)/$(DRVGEN_PATH)/$$base_prj.dws ;\
 		if [ -f $$dws_path ] ; then \
@@ -93,14 +94,14 @@ echo " id=$(my_dtb_id)" >>$(2);\
 $(eval my_dtb_id:=$(shell echo $$(($(my_dtb_id)+1))))
 endef
 
-$(objtree)/dtboimg.cfg: FORCE
-	rm -f $@.tmp
-	$(foreach f,$(ABS_DTB_FILES),$(call mk_dtboimg_cfg,$(f),$@.tmp))
-	if ! cmp -s $@.tmp $@; then \
-		mv $@.tmp $@; \
-	else \
-		rm $@.tmp; \
-	fi
+#$(objtree)/dtboimg.cfg: FORCE
+#	rm -f $@.tmp
+#	$(foreach f,$(ABS_DTB_FILES),$(call mk_dtboimg_cfg,$(f),$@.tmp))
+#	if ! cmp -s $@.tmp $@; then \
+#		mv $@.tmp $@; \
+#	else \
+#		rm $@.tmp; \
+#	fi
 
 $(objtree)/dtbimg.cfg: FORCE
 	rm -f $@.tmp

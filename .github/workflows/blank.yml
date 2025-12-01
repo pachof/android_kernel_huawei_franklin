@@ -16,5 +16,5 @@ jobs:
           config: FRLM-L23_defconfig‎
           arch: arm64
           other-gcc64-url: https://github.com/KudProject/aarch64-linux-android-4.9
-          other-gcc64-branch: main
+          other-gcc64-branch: master
           android-version: 10

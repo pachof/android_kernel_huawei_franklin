@@ -2360,6 +2360,9 @@ CONFIG_SPI_MT65XX=y
 # Enable PHYLIB and NETWORK_PHY_TIMESTAMPING to see the additional clocks.
 #
 CONFIG_PINCTRL=y
+CONFIG_MACH_MT6768=y
+CONFIG_PINCTRL_MT6768=y
+
 
 #
 # Pin controllers

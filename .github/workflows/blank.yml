@@ -13,7 +13,7 @@ jobs:
         with:
           kernel-url: https://github.com/pachof/android_kernel_huawei_franklin
           kernel-branch: main
-          config: frl-l23_defconfig‎
+          config: defconfig‎
           arch: arm64
           other-gcc64-url: https://github.com/KudProject/aarch64-linux-android-4.9
           other-gcc64-branch: master

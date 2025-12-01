@@ -15,7 +15,7 @@ jobs:
           kernel-branch: main
           config: FRLM-L23_defconfig‎
           arch: arm64
-          aosp-gcc: true
+          other-gcc64-url: https://github.com/KudProject/aarch64-linux-android-4.9
+          other-gcc64-branch: main
           aosp-clang: true
           android-version: 10
-          aosp-clang-version: r383902

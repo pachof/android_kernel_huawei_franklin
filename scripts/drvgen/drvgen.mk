@@ -94,14 +94,14 @@ echo " id=$(my_dtb_id)" >>$(2);\
 $(eval my_dtb_id:=$(shell echo $$(($(my_dtb_id)+1))))
 endef
 
-#$(objtree)/dtboimg.cfg: FORCE
-#	rm -f $@.tmp
-#	$(foreach f,$(ABS_DTB_FILES),$(call mk_dtboimg_cfg,$(f),$@.tmp))
-#	if ! cmp -s $@.tmp $@; then \
-#		mv $@.tmp $@; \
-#	else \
-#		rm $@.tmp; \
-#	fi
+$(objtree)/dtboimg.cfg: FORCE
+	rm -f $@.tmp
+	$(foreach f,$(ABS_DTB_FILES),$(call mk_dtboimg_cfg,$(f),$@.tmp))
+	if ! cmp -s $@.tmp $@; then \
+		mv $@.tmp $@; \
+	else \
+		rm $@.tmp; \
+	fi
 
 $(objtree)/dtbimg.cfg: FORCE
 	rm -f $@.tmp

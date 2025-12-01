@@ -20,3 +20,4 @@ jobs:
           other-gcc32-url: https://github.com/LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9
           other-gcc32-branch: lineage-17.1
           android-version: 10
+          extra-make-args: olddefconfig

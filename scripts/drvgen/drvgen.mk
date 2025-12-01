@@ -60,7 +60,8 @@ $(DRVGEN_FILE_LIST): $(DRVGEN_TOOL) $(DRVGEN_FIG) $(PROJ_DTS_FILES)
 endif
 	for i in $(PROJ_DTS_FILES); do \
 		base_prj=`grep -m 1 '#include [<\"].*\/cust\.dtsi[>\"]' $$i | sed 's/#include [<"]//g'\
-	       	| sed 's/\/cust\.dtsi[>"]//g' | sed 's/\/\*//g' | sed 's/\*\///g' | sed 's///g'`\
+	       	| sed 's/\/cust\.dtsi[>"]//g' | sed 's/\/\*//g' | sed 's/\*\///g' | sed 's/
+//g'`\
 		prj_path=$(DRVGEN_OUT)/$$base_prj ;\
 		dws_path=$(srctree)/$(DRVGEN_PATH)/$$base_prj.dws ;\
 		if [ -f $$dws_path ] ; then \
@@ -95,7 +96,11 @@ endef
 
 $(objtree)/dtboimg.cfg: FORCE
 	rm -f $@.tmp
-	$(foreach f,$(ABS_DTB_FILES),$(call mk_dtboimg_cfg,$(f),$@.tmp))
+	@if [ -n "$(ABS_DTB_FILES)" ]; then \
+		$(foreach f,$(ABS_DTB_FILES),$(call mk_dtboimg_cfg,$(f),$@.tmp)); \
+	else \
+		touch $@.tmp; \
+	fi
 	if ! cmp -s $@.tmp $@; then \
 		mv $@.tmp $@; \
 	else \
@@ -104,7 +109,11 @@ $(objtree)/dtboimg.cfg: FORCE
 
 $(objtree)/dtbimg.cfg: FORCE
 	rm -f $@.tmp
-	$(foreach f,$(ABS_DTB2_FILES),$(call mk_dtbimg_cfg,$(f),$@.tmp))
+	@if [ -n "$(ABS_DTB2_FILES)" ]; then \
+		$(foreach f,$(ABS_DTB2_FILES),$(call mk_dtbimg_cfg,$(f),$@.tmp)); \
+	else \
+		touch $@.tmp; \
+	fi
 	if ! cmp -s $@.tmp $@; then \
 		mv $@.tmp $@; \
 	else \

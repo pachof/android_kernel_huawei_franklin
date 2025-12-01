@@ -17,5 +17,4 @@ jobs:
           arch: arm64
           other-gcc64-url: https://github.com/KudProject/aarch64-linux-android-4.9
           other-gcc64-branch: main
-          aosp-clang: true
           android-version: 10

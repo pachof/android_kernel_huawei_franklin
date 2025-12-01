@@ -93,5 +93,6 @@ echo -e "\nCompleted in $((SECONDS / 60)) minute(s) and $((SECONDS % 60)) second
 echo "Zip: $ZIPNAME"
 else
 echo -e "\nCompilation failed!"
+make clean
 exit 1
 fi

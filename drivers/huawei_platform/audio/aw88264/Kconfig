@@ -1,0 +1,3 @@
+config SND_SOC_AW88264
+    bool "audio driver for awinic aw88264"
+    default n

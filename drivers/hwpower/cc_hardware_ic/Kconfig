@@ -1,0 +1,8 @@
+#
+# huawei hardware ic drivers
+#
+
+source "drivers/hwpower/cc_hardware_ic/coul/Kconfig"
+source "drivers/hwpower/cc_hardware_ic/buck_boost/Kconfig"
+source "drivers/hwpower/cc_hardware_ic/charge_pump/Kconfig"
+source "drivers/hwpower/cc_hardware_ic/boost_5v/Kconfig"

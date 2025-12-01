@@ -1,0 +1,10 @@
+# audio drivers
+subdir-ccflags-y += -Idrivers/devkit/audiokit/smartpakit/
+obj-$(CONFIG_TFA9894) += tfa9894/
+obj-$(CONFIG_SND_SOC_AW88264) += aw88264/
+obj-$(CONFIG_FS1894) += fs1894/
+obj-$(CONFIG_HEADSET_AUTO_CALIB) += hs_auto_calib/
+obj-$(CONFIG_TFA98XX) += tfa98xx/
+obj-$(CONFIG_ANA_HS_EXTERN_OPS)	+= ana_hs_extern_ops/
+obj-$(CONFIG_CS35LXX) += cs35lxx/
+obj-$(CONFIG_TFA98XXA) += tfa98xxa/

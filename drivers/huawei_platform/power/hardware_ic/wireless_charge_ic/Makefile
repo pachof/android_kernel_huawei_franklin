@@ -1,0 +1,2 @@
+obj-$(CONFIG_WIRELESS_CPS4057) += cps4057/
+obj-$(CONFIG_WIRELESS_STWLC88) += stwlc88/

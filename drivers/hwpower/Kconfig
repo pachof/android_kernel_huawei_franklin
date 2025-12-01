@@ -1,0 +1,11 @@
+#
+# huawei power common drivers
+#
+
+source "drivers/hwpower/cc_common_module/Kconfig"
+source "drivers/hwpower/cc_adapter/Kconfig"
+source "drivers/hwpower/cc_hardware_ic/Kconfig"
+source "drivers/hwpower/cc_hardware_monitor/Kconfig"
+source "drivers/hwpower/cc_hardware_channel/Kconfig"
+source "drivers/hwpower/cc_wireless/Kconfig"
+source "drivers/hwpower/cc_battery/Kconfig"

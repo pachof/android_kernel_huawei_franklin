@@ -1,0 +1,22 @@
+#include "../huawei_audio/huawei_mt6359_accdet.dtsi"
+#include "../huawei_audio/huawei_mt6873_audio_dsp.dtsi"
+#include "../huawei_audio/kkg_ots/device_boxid.dtsi"
+#include "../huawei_audio/kkg_ots/aw88264.dtsi"
+#include "../huawei_audio/kkg_ots/tfa9874.dtsi"
+#include "../huawei_audio/kkg_ots/fs1894.dtsi"
+
+&smartpakit {
+	misc_rw_permission_enable;
+	status = "ok";
+};
+
+&audio_hw_config {
+	audio_param_path = "odm/etc/audio/audio_param";
+	audio_param_ce_path = "odm/etc/audio/audio_param_ce";
+	speaker_test_content = "leftspeaker,rightspeaker";
+};
+
+&sound{
+	mtk_spk_i2s_out = <3>;
+	mtk_spk_i2s_in = <9>;
+};

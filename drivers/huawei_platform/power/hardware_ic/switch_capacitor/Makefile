@@ -1,0 +1,5 @@
+obj-$(CONFIG_BQ25970) += bq25970/
+obj-$(CONFIG_RT9759) += rt9759/
+obj-$(CONFIG_LTC7820) += ltc7820/
+obj-$(CONFIG_SCHARGER_V600) += schargerV600/
+obj-$(CONFIG_SM5450) += sm5450/

@@ -1,0 +1,10 @@
+obj-$(CONFIG_HW_MTK_RTG_SCHED) += iaware_rtg.o
+obj-$(CONFIG_HW_MTK_RTG_SCHED) += proc_state.o
+obj-$(CONFIG_HW_MTK_RTG_SCHED) += set_rtg.o
+obj-$(CONFIG_HW_MTK_RTG_SCHED) += trans_rtg.o
+obj-$(CONFIG_HW_MTK_RTG_SCHED) += frame_timer.o
+obj-$(CONFIG_HW_MTK_RTG_SCHED) += frame_info.o
+obj-$(CONFIG_HW_MTK_RTG_SCHED) += aux_info.o
+obj-$(CONFIG_HW_MTK_RTG_SCHED) += mtk_rtg_sched.o
+obj-$(CONFIG_MTK_RTG_SCHED_DEBUG) += aux_debug.o
+obj-$(CONFIG_MTK_RTG_SCHED_DEBUG) += frame_debug.o

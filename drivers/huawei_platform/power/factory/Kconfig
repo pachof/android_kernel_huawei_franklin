@@ -1,0 +1,7 @@
+#
+# huawei power factory
+#
+
+config HW_POWER_FACTORY
+        bool "power_factory"
+        default n

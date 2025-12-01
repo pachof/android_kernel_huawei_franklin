@@ -1,0 +1,8 @@
+#
+# Misc strange devices
+#
+config TFA98XXA
+    bool "Goodix TFA98XXA smartpa misc driver"
+    default n
+
+

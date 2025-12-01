@@ -1,0 +1,19 @@
+#include "../huawei_audio/huawei_mt6359_accdet.dtsi"
+#include "../huawei_audio/huawei_mt6873_audio_dsp.dtsi"
+#include "../huawei_audio/tnnh/aw88264.dtsi"
+
+&smartpakit {
+	misc_rw_permission_enable;
+	out_device = <0>;
+	status = "ok";
+};
+
+&audio_hw_config {
+	audio_param_path = "odm/etc/audio/audio_param";
+	audio_param_ce_path = "odm/etc/audio/audio_param_ce";
+};
+
+&sound{
+	mtk_spk_i2s_out = <3>;
+	mtk_spk_i2s_in = <9>;
+};

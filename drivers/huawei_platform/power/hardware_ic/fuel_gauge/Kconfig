@@ -1,0 +1,10 @@
+#
+# fuel gauge ic drivers
+#
+source "drivers/huawei_platform/power/hardware_ic/fuel_gauge/rt9426/Kconfig"
+
+config FUEL_GAUGE
+	bool "fuel gauge"
+	default n
+	help
+	  Say Y here to enable fuel gauge.

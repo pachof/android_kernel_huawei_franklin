@@ -1,0 +1,3 @@
+config TCPC_FUSB302
+        bool "fusb302"
+        default n

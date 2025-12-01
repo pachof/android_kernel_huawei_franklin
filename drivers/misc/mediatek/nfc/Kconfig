@@ -1,0 +1,10 @@
+config NFC_ST21NFC
+	tristate "ST21NFC driver"
+	depends on I2C
+	help
+	  ST21NFC driver.
+
+config MTK_NFC_CLKBUF_ENABLE
+	tristate "Enable clock buffer for NFC"
+	help
+	  Enable clock buffer from PMIC for NFC.

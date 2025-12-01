@@ -96,7 +96,9 @@ endef
 $(objtree)/dtboimg.cfg: FORCE
 	rm -f $@.tmp
 	@if [ -n "$(ABS_DTB_FILES)" ]; then \
-		$(foreach f,$(ABS_DTB_FILES),$(call mk_dtboimg_cfg,$(f),$@.tmp)); \
+		for f in $(ABS_DTB_FILES); do \
+			$(call mk_dtboimg_cfg,$$f,$@.tmp); \
+		done; \
 	else \
 		touch $@.tmp; \
 	fi
@@ -109,7 +111,9 @@ $(objtree)/dtboimg.cfg: FORCE
 $(objtree)/dtbimg.cfg: FORCE
 	rm -f $@.tmp
 	@if [ -n "$(ABS_DTB2_FILES)" ]; then \
-		$(foreach f,$(ABS_DTB2_FILES),$(call mk_dtbimg_cfg,$(f),$@.tmp)); \
+		for f in $(ABS_DTB2_FILES); do \
+			$(call mk_dtbimg_cfg,$$f,$@.tmp); \
+		done; \
 	else \
 		touch $@.tmp; \
 	fi

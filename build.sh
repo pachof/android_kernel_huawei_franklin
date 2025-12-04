@@ -28,8 +28,11 @@ export KBUILD_BUILD_VERSION="1"
 export LOCALVERSION
 sudo -E add-apt-repository universe
 sudo -E apt-get -qq update
-sudo -E apt-get -qq install bc python2 python3 python-is-python3
+sudo -E apt-get -qq install bc python3 python-is-python3 wget
 
+wget http://archive.ubuntu.com/ubuntu/pool/universe/p/python2.7/python2.7_2.7.18-13ubuntu1_amd64.deb
+
+sudo -E apt -qq install ./python2.7_2.7.18-13ubuntu1_amd64.deb
 if ! [ -d "${CLANG_DIR}" ]; then
 echo "Clang not found! Cloning to ${TC_DIR}..."
 if ! git clone --depth=1 -b clang-20.0 https://gitlab.com/kutemeikito/rastamod69-clang ${CLANG_DIR}; then

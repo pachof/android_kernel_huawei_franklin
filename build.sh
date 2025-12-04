@@ -26,7 +26,7 @@ export KBUILD_BUILD_HOST="RastaMod69"
 export LD_LIBRARY_PATH="$CLANG_DIR/lib:$LD_LIBRARY_PATH"
 export KBUILD_BUILD_VERSION="1"
 export LOCALVERSION
-
+sudo -E add-apt-repository universe
 sudo -E apt-get -qq update
 sudo -E apt-get -qq install bc python2.7 python3 python-is-python3
 

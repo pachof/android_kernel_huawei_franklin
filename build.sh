@@ -33,8 +33,11 @@ sudo -E apt-get -qq install bc python3 python-is-python3 wget
 wget http://archive.ubuntu.com/ubuntu/pool/universe/p/python2.7/python2.7_2.7.18-13ubuntu1_amd64.deb
 wget https://archive.ubuntu.com/ubuntu/pool/universe/p/python2.7/libpython2.7-stdlib_2.7.18-1~20.04.7_amd64.deb
 wget https://archive.ubuntu.com/ubuntu/pool/universe/p/python2.7/python2.7-minimal_2.7.18-1~20.04.7_amd64.deb
-
-sudo -E apt -qq install ./python2.7_2.7.18-13ubuntu1_amd64.deb ./python2.7-minimal_2.7.18-1~20.04.7_amd64.deb ./libpython2.7-stdlib_2.7.18-1~20.04.7_amd64.deb
+wget https://archive.ubuntu.com/ubuntu/pool/universe/p/python2.7/libpython2.7-minimal_2.7.18-1~20.04.7_amd64.deb
+wget http://archive.ubuntu.com/ubuntu/pool/universe/libf/libffi7/libffi7_3.3-5ubuntu1_amd64.deb
+wget http://archive.ubuntu.com/ubuntu/pool/main/m/mime-support/mime-support_3.66_all.deb
+wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.0g-2ubuntu4_amd64.deb
+sudo -E apt -qq install ./python2.7_2.7.18-13ubuntu1_amd64.deb ./python2.7-minimal_2.7.18-1~20.04.7_amd64.deb ./libpython2.7-stdlib_2.7.18-1~20.04.7_amd64.deb ./libssl1.1_1.1.0g-2ubuntu4_amd64.deb ./mime-support_3.66_all.deb ./libffi7_3.3-5ubuntu1_amd64.deb ./libpython2.7-minimal_2.7.18-1~20.04.7_amd64.deb
 if ! [ -d "${CLANG_DIR}" ]; then
 echo "Clang not found! Cloning to ${TC_DIR}..."
 if ! git clone --depth=1 -b clang-20.0 https://gitlab.com/kutemeikito/rastamod69-clang ${CLANG_DIR}; then

@@ -28,7 +28,7 @@ export KBUILD_BUILD_VERSION="1"
 export LOCALVERSION
 sudo -E add-apt-repository universe
 sudo -E apt-get -qq update
-sudo -E apt-get -qq install bc python2.7 python3 python-is-python3
+sudo -E apt-get -qq install bc python2 python3 python-is-python3
 
 if ! [ -d "${CLANG_DIR}" ]; then
 echo "Clang not found! Cloning to ${TC_DIR}..."

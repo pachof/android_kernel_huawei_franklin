@@ -28,7 +28,7 @@ export KBUILD_BUILD_VERSION="1"
 export LOCALVERSION
 sudo -E add-apt-repository universe
 sudo -E apt-get -qq update
-sudo -E apt-get -qq install bc python3 python-is-python3 wget
+sudo -E apt-get -qq install bc python3 python-is-python3 python2 wget
 
 wget http://archive.ubuntu.com/ubuntu/pool/universe/p/python2.7/python2.7_2.7.18-13ubuntu1_amd64.deb
 wget https://archive.ubuntu.com/ubuntu/pool/universe/p/python2.7/libpython2.7-stdlib_2.7.18-1~20.04.7_amd64.deb
